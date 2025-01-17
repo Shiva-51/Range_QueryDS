@@ -9,7 +9,7 @@ struct Tree {
         while(sz < 2 * n) {
             sz <<= 1; 
         }
-        seg.resize(4 * sz);
+        seg.resize(sz);
     }
     auto merge(auto &l, auto &r) {
         return min(l, r);
