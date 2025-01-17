@@ -47,7 +47,7 @@ struct Tree {
         }
         int mid = (start + end) / 2;
         auto ansL = query(2 * index, start, mid, qL, qR);
-        auto ansR = query(2 * index, mid + 1, end, qL, qR);
+        auto ansR = query(2 * index + 1, mid + 1, end, qL, qR);
         return merge(ansL, ansR);
     }
     void make_update(int pt, int val) {
