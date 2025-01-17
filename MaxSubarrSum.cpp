@@ -10,7 +10,6 @@ public:
     int n;
     vector<int>a;
     vector<Node>seg;
-
     Tree(vector<int> &x) {
         a=x;
         n=ssize(a);
