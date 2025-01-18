@@ -10,7 +10,7 @@ struct Tree {
             sz <<= 1; 
         }
         seg.resize(sz);
-        build(1, 0, n-1);
+        build(1, 0, n - 1);
     }
     auto merge(auto &l, auto &r) {
         return min(l, r);
