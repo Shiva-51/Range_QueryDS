@@ -8,6 +8,9 @@ public:
         n=ssize(a);
         LOG=log2(n)+1;
         LogT.resize(n+1);
+        for(int i=2;i<=n;i++) {
+            LogT[i]=1+LogT[i/2];
+        }
         dp.resize(LOG+1,vector<int>(n+1));
         build();
     }
@@ -15,9 +18,6 @@ public:
         return min(l,r);
     }
     void build() {
-        for(int i=2;i<=n;i++) {
-            LogT[i]=1+LogT[i/2];
-        }
         for(int i=0;i<n;i++) dp[0][i]=a[i];
         for(int i=1;i<LOG;i++) {
             for(int j=0;j+(1ll<<(i-1))<=n;j++) {
