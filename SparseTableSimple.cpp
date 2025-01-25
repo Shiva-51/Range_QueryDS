@@ -30,4 +30,14 @@ public:
         int lp=LogT[N];
         return merge(dp[lp][l],dp[lp][r-(1<<lp)+1]);
     }
+    int make_query2(int l,int r) { //Non-idem
+        int N=r-l+1;
+        int ans=INT_MAX;
+        for(int i=20;i>=0;i--) {
+            if((1<<i)&N) {
+                ans=merge(ans,dp[i][l]);
+                l+=(1<<i);
+            }
+        }
+    }
 };
