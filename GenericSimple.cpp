@@ -11,7 +11,7 @@ struct SegTree {
         while(s < 2 * n) {
             s = s << 1;
         }
-        tree.resize(s); fill(all(tree), Node());
+        tree.resize(s, Node());
         build(0, n - 1, 1);
     }
     void build(int start, int end, int index)  
