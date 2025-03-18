@@ -39,5 +39,6 @@ public:
                 l+=(1<<i);
             }
         }
+        return ans;
     }
 };
